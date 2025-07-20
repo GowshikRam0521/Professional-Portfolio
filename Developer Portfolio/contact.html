@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Gowshik Ram</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .contact-subtitle {
+            font-size: 1rem;
+            color: #b3b3b3;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 20px;
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 16px;
+            font-size: 1rem;
+            background-color: #262626;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #00bcd4;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-btn {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #0199aa;
+        }
+
+        .contact-social {
+            margin-top: 40px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .contact-social a {
+            font-size: 1.5rem;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .contact-social a:hover {
+            color: #00bcd4;
+        }
+
+        @media (max-width: 600px) {
+            .contact-form {
+                padding: 25px;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contact-section">
+        <h1 class="contact-title">Get in Touch</h1>
+        <p class="contact-subtitle">I'd love to hear about your project or just chat over coffee. Fill out the form and let's connect.</p>
+
+        <!-- <form action="https://formspree.io/f/mdkdnqrn" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="_replyto" required />
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+        <script>
+            const form = document.querySelector(".contact-form");
+            form.addEventListener("submit", async function (e) {
+              e.preventDefault();
+          
+              const formData = new FormData(form);
+              const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" }
+              });
+          
+              if (response.ok) {
+                form.innerHTML = "<p style='color:#00bcd4; font-weight:500;'>Thanks! Your message has been sent.</p>";
+              } 
+            //   else {
+            //     form.innerHTML = "<p style='color:red;'>Oops! Something went wrong.</p>";
+            //   }
+            });
+          </script> -->
+          
+          <form action="https://formspree.io/f/mdkdnqrn" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="_replyto" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+          
+            <button type="submit" class="contact-btn">Send Message</button>
+          </form>
+          
+          <script>
+            const form = document.querySelector(".contact-form");
+          
+            form.addEventListener("submit", async function (e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" }
+              });
+          
+              if (response.ok) {
+                form.innerHTML = "<p style='color:#00bcd4;'>✅ Message sent successfully!</p>";
+              } else {
+                form.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong.</p>";
+              }
+            });
+          </script>
+          
+
+        <div class="contact-social">
+            <a href="https://github.com/GowshikRam0521"><i class="ri-github-fill"></i></a>
+            <a href="https://www.instagram.com/g_o_w_s_h_i_k_r/"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+        </div>
+    </section>
+</body>
+
+</html>
